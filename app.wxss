@@ -1,0 +1,18 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  background: #efeff4;
+}
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: #efeff4;
+  font-size: 0.42667rem;
+  font-family: "STXihei";  
+}  

@@ -1,0 +1,194 @@
+@charset 'utf-8';
+$base-font-size: 75px; //design iphone6: 375px * 2 / 10 = 75px; --design
+// $base-font-size: 32px; //design iphone3gs: 320px / 10 = 32px
+// $base-font-size: 64px; //design iphone4/5: 320px * 2 / 10 = 64px
+// $base-font-size: 124.2px; //design iphone6: 414px * 3 / 10 = 124.2px;
+// $base-font-size: 23.4375px; //design 750px / 32 = 23.4375px;
+// $base-font-size: 17px; //design 750px / 32 = 23.4375px;
+@function px2rem($px) {
+    // @return  $px / $base-font-size * 1rem ;
+    @return $px / $base-font-size /2 * 1rem;
+}
+body {
+    background-color: #f5f6f9;
+    font-size: px2rem(64px);
+    font-family: "STXihei";
+}
+.book-sort {
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    margin-top: px2rem(20px);
+    border-top: 1px solid #d9d9d9d;
+    border-bottom: 1px solid #d9d9d9d;
+    display: inline-table;
+    margin-bottom: px2rem(20px);
+    >div {
+        width: 25%;
+        height: px2rem(120px);
+        line-height: px2rem(120px);
+        display: inline-block;
+        >div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .sys {
+        display: inline-table;
+        div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .view-model {
+            width: px2rem(128px);
+            height: px2rem(100px);
+            padding-right: px2rem(20px);
+            margin-right: px2rem(20px);
+            border-right: 2px solid #999;
+        }
+    }
+    .up-down-icon {
+        width: px2rem(64px);
+        height: px2rem(64px);
+    }
+}
+
+.book-list {
+    .book-desc {
+        ul {
+            li {
+                div {
+                    line-height: px2rem(60px);
+                }
+            }
+        }
+    }
+}
+
+.tiled-list {
+    ul {
+        li {
+            width: 50%;
+        }
+        img {
+            width: px2rem(380px);
+        }
+    }
+}
+
+.dialog .shade {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    opacity: 0.6;
+    background: #090909;
+    display: block;
+    z-index: 99;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    -moz-transition-duration: 0.2s;
+    -moz-transition-timing-function: ease;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease;
+    -o-transition-duration: 0.2s;
+    -o-transition-timing-function: ease;
+}
+
+.dialog .modal {
+    // padding: 0 px2rem(64px);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    display: block;
+    z-index: 100;
+    right: 0;
+    /*padding-right: 4rem;*/
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    -moz-transition-duration: 0.2s;
+    -moz-transition-timing-function: ease;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease;
+    -o-transition-duration: 0.2s;
+    -o-transition-timing-function: ease;
+}
+
+.dialog .modal .modal-dialog {
+    height: 100%;
+    margin: 0;
+}
+
+.dialog .modal .modal-dialog .modal-content {
+    overflow-y: auto;
+    border-radius: 0;
+}
+
+.dialog .modal .modal-dialog .modal-content .modal-body {
+    padding-right: 0;
+}
+
+.dialog .modal .modal-dialog .modal-footer {
+    text-align: center;
+    display: inline-table;
+    width: 100%;
+    // margin-top: px2rem(32px);
+}
+
+.dialog .modal .modal-dialog .modal-footer div {
+    width: 50%;
+    line-height: px2rem(120px);
+    // border-top: $border;
+    display: inline-block;
+    // @include box-sizing;
+    // margin-top:px2rem(32px);
+}
+
+.category-all {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    margin-left: px2rem(300px);
+    padding-right: px2rem(300px);
+    background: #fff;
+    display: block;
+    z-index: 101;
+    overflow-y: auto;
+    // @include transition-duration(0.2s);
+    // @include transition-timing-function(ease);
+    p {
+        line-height: px2rem(75px);
+        font-size: px2rem(75px);
+        margin: 0;
+        text-align: center;
+        padding-top: px2rem(50px);
+        padding-left: px2rem(50px);
+        span {
+            float: left;
+            width: px2rem(75px);
+            height: px2rem(75px);
+        }
+    }
+    > ul {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        div {
+            line-height: px2rem(75px);
+            background: #f4f5f7;
+            border-top: 1px solid #d9d9d9;
+            padding: px2rem(30px) 0;
+            padding-left: px2rem(30px);
+        }
+        span {
+            position: absolute;
+            right: px2rem(75px);
+            top: px2rem(75px);
+        }
+        >li>div {
+            background: #fff;
+        }
+    }
+}

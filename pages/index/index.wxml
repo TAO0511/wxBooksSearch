@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="search-header">
+  <view class="section search">
+    <input placeholder="图书搜索" auto-focus/>
+  </view> 
+</view>
+<view class="book-sort" sort>
+    <view class="sort text-require" >默认</view>
+    <view class="sort" >
+        <view>出版时间</view>
+        <view class="up-down-icon">
+            <view ng-class="" class="down-default-icon sort-icon"></view>
+        </view>
+    </view>
+    <view class="sort" >
+        <view ng-class="">定价</view>
+        <view class="up-down-icon">
+            <view ng-class="" class="down-default-icon sort-icon"></view>
+        </view>
+    </view>
+    <view>
+        <view class="sys">
+            <view class="view-model" ng-class="{'list-icon':view_list,'tiled-icon':!view_list}" ng-click="changeView()"></view>
+            <view ng-click="toggleScreen()">筛选</view>
+        </view>
+    </view>
+</view>
+
